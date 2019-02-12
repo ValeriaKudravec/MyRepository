@@ -1,0 +1,18 @@
+D:\Универ\уп\MyRepository>git log
+commit 3fa62b94d085aa2ec6c117a6f122206fc15a97e3 (HEAD -> master)
+Author: ValeriaKudravec <valeriakudravec@gmail.com>
+Date:   Tue Feb 12 20:12:37 2019 +0300
+
+    Third commit
+
+commit 38430b033e7732aee4d90fda8e177d635438d2f7 (origin/master)
+Author: ValeriaKudravec <valeriakudravec@gmail.com>
+Date:   Tue Feb 12 20:08:00 2019 +0300
+
+    Second commit
+
+commit 857ac969562714b270eca29f2d3d91426a54a000
+Author: ValeriaKudravec <valeriakudravec@gmail.com>
+Date:   Tue Feb 12 19:53:54 2019 +0300
+
+    first commit
