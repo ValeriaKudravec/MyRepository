@@ -4,3 +4,8 @@ On branch master
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
+D:\Универ\уп\MyRepository>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
