@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  top: 0;
+  padding-left: 0; /*убираем отступы*/
+  background:#b38df7; /*добавляем фон всему меню*/
+  height: 50px; /*задаем высоту*/
+}
+a.menu{
+ margin-left: 2vw;
+   margin-right: 2wv;
+  margin-top:0px;
+   margin-bottom:0px;
+    border-radius: 0px;
+
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#b38df7; /*добавляем фон к пункту меню*/
+  color:#000000; /*меняем цвет ссылок*/
+  padding:0px 55px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:45px; /*ровняем меню по вертикали*/
+  display: block;
+  border: 1px solid #000000; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+a.button {
+  margin-left: 2vw;
+  margin-right: 2wv;
+  margin-top:7px;
+  border-radius: 10px;
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#b38df7; /*добавляем фон к пункту меню*/
+  color:#000000; /*меняем цвет ссылок*/
+  padding:0px 55px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:36px; /*ровняем меню по вертикали*/
+  display: block;
+  border: 1px solid #000000; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+a.button:hover {
+  background:#8b51f5;/*добавляем эффект при наведении*/
+}
+a.menu:hover {
+  background:#8b51f5;/*добавляем эффект при наведении*/
+}
+a.showMore:hover {
+  background:#8b51f5;/*добавляем эффект при наведении*/
+}
+b:hover {
+  background:#8b51f5;/*добавляем эффект при наведении*/
+}
+
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  position:relative; /*задаем позицию для позиционирования*/
+}
+
+    /*Стили для скрытого выпадающего меню*/
+    li > ul {
+    border-radius: 0px;
+        margin:0 px;
+        position:absolute;
+        top:45px;
+        display:none;
+        background:none;
+    }
+
+    /*Делаем скрытую часть видимой*/
+    li:hover > ul {
+        display:block;
+        width:250px;  /*Задаем ширину выпадающего меню*/
+    }
+   li:hover > ul > li {
+        float:none; /*Убираем горизонтальное позиционирование*/
+    }
+
+   .filtr{
+    float:left;
+    margin-top:220px;;
+    margin-left:7vw;
+    border: 1px solid #b38df7;
+    width:15%;
+   min-width: 200px;
+    }
+    @media screen and (max-width: 800px)  {
+            .filtr{
+            display:none;}
+
+            }
+    h2{
+    margin-left:30px;
+    margin-top:30px;
+    margin-bottom:20px;
+    }
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+.checkbox + label {
+  position: relative;
+  padding: 0 0 0 60px;
+  cursor: pointer;
+}
+.checkbox + label:before {
+  content: '';
+  margin-left:20px;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  border-radius: 13px;
+  background: #dacafb;
+  box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
+  transition: .2s;
+}
+.checkbox + label:after {
+  margin-left:20px;
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background: #b38df7;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: .2s;
+}
+.checkbox:checked + label:before {
+  background: #dacafb;
+}
+.checkbox:checked + label:after {
+  left: 26px;
+}
+.checkbox:focus + label:before {
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+}
+label{
+margin-left:5 px;
+}
+.filtrInput{
+display:block;
+margin-left:10px;
+margin-top:11px;
+margin-bottom:36px;
+border:1px solid #b38df7;
+height:30px;
+width:82%;
+min-width:150px;}
+
+.post{
+width:43vw;
+height:60vw;
+min-width:400px;
+border:1px solid #b38df7;
+margin-top:11px;
+margin-left:35vw;
+}
+ @media screen and (max-width: 800px)  {
+       .post{
+              margin-left:1vw;
+              width:100vw;
+              height:125vw;
+              }
+       }
+
+ figure{
+ height:60px;
+ border:1px solid #b38df7;
+ }
+.name{
+margin-left: 15px;
+margin-top: 15px;
+font-family: mv boli;
+float:left;}
+.date{
+margin-top: 15px;
+margin-left: 15px;
+font-family: mv boli;
+float:left;}
+.setting{
+float:right;
+}
+.photo{
+width:90%;
+height:73%;
+margin-left:30px;
+margin-top:10px;}
+p{
+margin-top:10px;
+}
+a.teg{
+color: #631878;
+text-decoration: underline;
+}
+heard{
+color:#8b51f5;
+margin-left:20px;
+float:left;
+}
+p.like{
+margin-top:8%;
+color:#8b51f5;
+}
+
+a.showMore{
+width:23vw;
+margin-left:35vw;
+margin-right: 20px;
+margin-top:7px;
+
+margin-bottom:20px;
+border-radius: 10px;
+text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#b38df7; /*добавляем фон к пункту меню*/
+  color:#000000; /*меняем цвет ссылок*/
+  padding:0vw 0vw 0vw 20vw; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:36px; /*ровняем меню по вертикали*/
+  display: block;
+  border: 1px solid #000000; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;}
+@media screen and (max-width: 800px)  {
+       a.showMore{
+              margin-left:1vw;
+              width:100vw;
+              }
+       }
+button{
+float:left;
+border:0px;
+background:none;
+margin-top:3vw;
+margin-left:1vw;
+width:5%;
+height:4%;
+}
+footer{
+list-style: none;}
+p.items{
+padding:0% 5%;
+ float:left;
+  position:relative;
+}
+@media screen and (max-width: 800px)  {
+button{
+                       margin-top:0px;
+                        }
+                 }
+@media screen and (max-width: 800px)  {
+        p.like{
+               margin-top:0px;
+                }
+         }
