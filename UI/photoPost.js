@@ -300,7 +300,7 @@ var photoPosts = [
             }
             return null;
       }
-      function getAuthorPost(skip, top, filterConfig = null){
+      function getAuthorPost(skip, top, filterConfig){
             returnArray = [];
             arr = [];
             var index = 0;
@@ -315,6 +315,10 @@ var photoPosts = [
                                     arr[index]=photoPosts[i];
                                     ++index;
                               }
+                        }
+                        if(photoPosts[i].createdAt == filterConfig.createdAt){
+                              arr[index]=photoPosts[i];
+                              ++index;
                         }
                   }
             
