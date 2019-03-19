@@ -285,55 +285,111 @@ var photoPosts = [
        },
     ];
 'use strict';
- function filter(filterConfig){
-        arr = [];
-        let index = 0;
-              if(filterConfig!=null){
-              for(i = 0;i < _photoPosts.length; ++i){
-                    if(_photoPosts[i].author == filterConfig.author){
-                          arr[index]=_photoPosts[i];
-                                ++index;
-                    }
-                          for(k = 0; k < _photoPosts[i].hashtag.length; k++){
-                          if(_photoPosts[i].hashtag[k] == filterConfig.hashtag){
-                                arr[index]=_photoPosts[i];
-                                ++index;
-                          }
-                    }
-                    if(_photoPosts[i].createdAt == filterConfig.createdAt){
-                          arr[index]=_photoPosts[i];
-                          ++index;
-                    }
-              }
-            }
-            return this.authorphotoPosts;
+function comparePost(a, b) {
+      return a.createdAt>b.createdAt ? -1 : a.createdAt<b.createdAt ? 1 : 0;
     }
 class PostCollection{
-    constructor(_photoposts){
-       /* for(i = 0; i < photoPosts.length; i++){
-            this.photoPosts[i].author = photoPosts[i].author;
-        }*/
-        this._photoposts = photoPosts.slice();
+    constructor(photoPosts){
+        this._photoPosts = photoPosts.slice();
     }
-   
+      filter(filterConfig){
+      let arr = [];
+      let index = 0;
+            if(filterConfig!=null){
+            for(let i = 0;i <this._photoPosts.length; ++i){
+                  if(this._photoPosts[i].author == filterConfig.author){
+                        arr[index]=this._photoPosts[i];
+                              ++index;
+                  }
+                        for(let k = 0; k < this._photoPosts[i].hashtag.length; k++){
+                        if(this._photoPosts[i].hashtag[k] == filterConfig.hashtag){
+                              arr[index]=this._photoPosts[i];
+                              ++index;
+                        }
+                  }
+                  if(this._photoPosts[i].createdAt == filterConfig.createdAt){
+                        arr[index]=this._photoPosts[i];
+                        ++index;
+                  }
+            } 
+            return arr;
+          }
+          else{
+                return this._photoposts;
+          }
+         
+  }
     getPage (skip, top, filterConfig){
-        let rnArray = new Array();
+        let returnArray = new Array();
         let arr = new Array();
         arr = this.filter(filterConfig);
-        /*if(top+skip > arr.length){
+        if(top+skip > arr.length){
               top = arr.length;
-        }*/
+        }
         for(let l = skip; l < top; ++l){
               returnArray[l] = arr[l];
         }
         returnArray.sort(comparePost);
         returnArray = returnArray.sort(comparePost);
-        for(i = 0; i < returnArray.length; i++){
+        for(let i = 0; i < returnArray.length; i++){
               alert(returnArray[i].descriprion);
         }
         return returnArray;
   }
-
+      getPhotoPost(id) {
+            for(let i = 0;i < _photoPosts.length; ++i){
+                  if(_photoPosts[i].id == id){
+                        alert(_photoPosts[i].author );
+                        return _photoPosts[i];
+                  }
+            }
+            return null;
+      }
+      validatePhotoPost(photoPost){
+            if(photoPost.id == null){
+                  return false;
+            }
+            if(photoPost.descriprion == null){
+                  return false;
+            }
+            if(photoPost.author == null){
+                  return false;
+            }
+            if(photoPost.photoLink == null){
+                  return false;
+            }
+            if(photoPost.createdAt == null){
+                  return false;
+            }
+            return true;
+      }
+      addPhotoPost(photoPost){
+            if(validatePhotoPost(photoPost)){
+                  _photoPosts.push(photoPost);
+            }
+      }
+      removePhotoPost(id){
+            for(let i = 0;i < _photoPosts.length; ++i){
+                  if(_photoPosts[i].id == id){
+                        alert(_photoPosts[i].author );
+                        _photoPosts.slice(i, 1);
+                  }
+            }
+      }
 }
 post = new PostCollection(photoPosts);
+post.getPage(0,10, {hashtag:'post'});
+post.removePhotoPost('1');
 post.getPage(0,10);
+post.validatePhotoPost({author:'hi', descriprion:'hello'});
+post.addPhotoPost({
+      id: '21',
+      descriprion: 'новый пост',
+      createdAt:  Date.parse('2018-02-23T23:00:00'),
+      author: 'новопостер',
+      photoLink: '41_NQcBBMCI.jpg',
+      likes: ['petrov', 'ivanov'],
+      hashtag:['new', 'rain', 'again'],
+
+     });
+ post.getPage(0,10, {hashtag:'new'});
