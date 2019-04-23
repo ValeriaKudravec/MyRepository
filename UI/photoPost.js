@@ -294,13 +294,13 @@ var photoPosts = [
       function getPhotoPost(id) {
             for(i = 0;i < photoPosts.length; ++i){
                   if(photoPosts[i].id == id){
-                        alert( photoPosts[i].author );
+                        alert(photoPosts[i].author );
                         return photoPosts[i];
                   }
             }
             return null;
       }
-      function getAuthorPost(skip, top, filterConfig){
+      function getAuthorPost(skip = 0, top = 10, filterConfig){
             returnArray = [];
             arr = [];
             var index = 0;
@@ -394,3 +394,18 @@ var photoPosts = [
      getAuthorPost(0, 10);
     
     }());
+    var photoPost = {
+  
+      id: '20',
+  
+      descriprion: 'памагити',
+  
+      createdAt:  Date('2018-02-23T23:01:00'),
+  
+      author: 'можно ненада',
+  
+      photoLink: 'https://avatars.mds.yandex.net/get-pdb/25978/c677b333-0293-4299-96bc-39df0e535ca2/orig',
+      likes: ['petrov', 'ivanov', 'сидоров'],
+      hashtag:['help', 'ne', 'nada'],
+     };
+     validatePhotoPost(photoPost);

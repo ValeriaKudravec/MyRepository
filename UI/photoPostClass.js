@@ -7,7 +7,7 @@ var photoPosts = [
     
         descriprion: 'Первый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:00:00'),
+        createdAt: new  Date('2018-02-23T23:00:00'),
     
         author: 'Иванов Иван',
     
@@ -22,7 +22,7 @@ var photoPosts = [
     
         descriprion: 'Второй пост',
     
-        createdAt:  Date.parse('2018-01-23T23:01:00'),
+        createdAt:   new  Date('2018-01-23T23:01:00'),
     
         author: 'Петров Иван',
     
@@ -37,7 +37,7 @@ var photoPosts = [
     
         descriprion: 'Третий пост',
     
-        createdAt:  Date.parse('2017-02-23T23:05:00'),
+        createdAt:   new  Date('2017-02-23T23:05:00'),
     
         author: 'Петров петр',
     
@@ -51,7 +51,7 @@ var photoPosts = [
     
         descriprion: 'Четвертый пост',
     
-        createdAt:  Date.parse('2018-03-08T23:01:00'),
+        createdAt:   new  Date('2018-03-08T23:01:00'),
     
         author: 'User4',
     
@@ -65,7 +65,7 @@ var photoPosts = [
     
         descriprion: 'Пятый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'пользователь',
     
@@ -80,7 +80,7 @@ var photoPosts = [
     
         descriprion: 'Шестой пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'Огайчик Екатерина',
     
@@ -94,7 +94,7 @@ var photoPosts = [
     
         descriprion: 'seven пост',
     
-        createdAt:  Date.parse('2018-02-01T23:01:00'),
+        createdAt:   new  Date('2018-02-01T23:01:00'),
     
         author: 'Блогер',
     
@@ -108,7 +108,7 @@ var photoPosts = [
     
         descriprion: '8 пост',
     
-        createdAt:  Date.parse('2018-04-23T23:01:00'),
+        createdAt:   new  Date('2018-04-23T23:01:00'),
     
         author: 'Иванов Петр',
     
@@ -122,7 +122,7 @@ var photoPosts = [
     
         descriprion: 'Девятый пост',
     
-        createdAt:  Date.parse('2018-03-23T23:01:00'),
+        createdAt:   new  Date('2018-03-23T23:01:00'),
     
         author: 'калека',
     
@@ -136,7 +136,7 @@ var photoPosts = [
     
         descriprion: 'Десятый пост',
     
-        createdAt:  Date.parse('2018-02-02T23:01:00'),
+        createdAt:   new  Date('2018-02-02T23:01:00'),
     
         author: 'Чувак чувачок',
     
@@ -150,7 +150,7 @@ var photoPosts = [
     
         descriprion: 'Одинадцатый пост',
     
-        createdAt:  Date('2018-02-23T23:01:00'),
+        createdAt:  new Date('2018-02-23T23:01:00'),
     
         author: 'тюльпан',
     
@@ -164,7 +164,7 @@ var photoPosts = [
     
         descriprion: 'двенадцатый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:  new  Date('2018-02-23T23:01:00'),
     
         author: 'чсв печь',
     
@@ -178,7 +178,7 @@ var photoPosts = [
     
         descriprion: 'Тринадцатый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'уууууужин',
     
@@ -192,7 +192,7 @@ var photoPosts = [
     
         descriprion: 'Четырнадцатый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:  new  Date('2018-02-23T23:01:00'),
     
         author: 'юджин',
     
@@ -206,7 +206,7 @@ var photoPosts = [
     
         descriprion: 'евгений мележ',
     
-        createdAt:  Date.parse('2018-02-03T23:01:00'),
+        createdAt:   new  Date('2018-02-03T23:01:00'),
     
         author: 'мележ',
     
@@ -220,7 +220,7 @@ var photoPosts = [
     
         descriprion: '16-ый пост',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:  new  Date('2018-02-23T23:01:00'),
     
         author: 'снеговик',
     
@@ -234,7 +234,7 @@ var photoPosts = [
     
         descriprion: 'рюмка водки',
     
-        createdAt:  Date.parse('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'Петрова Ивана',
     
@@ -248,7 +248,7 @@ var photoPosts = [
     
         descriprion: 'красотуля',
     
-        createdAt:  Date('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'Ивангей',
     
@@ -262,7 +262,7 @@ var photoPosts = [
     
         descriprion: 'дивчина',
     
-        createdAt:  Date('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'Алесенька Котик',
     
@@ -276,7 +276,7 @@ var photoPosts = [
     
         descriprion: 'памагити',
     
-        createdAt:  Date('2018-02-23T23:01:00'),
+        createdAt:   new  Date('2018-02-23T23:01:00'),
     
         author: 'можно ненада',
     
