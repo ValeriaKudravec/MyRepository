@@ -100,7 +100,7 @@ var photoPosts = [
     
         photoLink: 'https://avatars.mds.yandex.net/get-pdb/25978/c677b333-0293-4299-96bc-39df0e535ca2/orig',
         likes: ['petrov', 'ivanov', 'сидоров', 'Огайчик Екатерина', 'пользователь', 'User4', 'User3'],
-        hashtag:['seven'],
+        hashtag:['seven', 'two'],
        },
        {
     
@@ -164,7 +164,7 @@ var photoPosts = [
     
         descriprion: 'двенадцатый пост',
     
-        createdAt:  Date('2018-02-23T23:01:00'),
+        createdAt:  new Date('2018-02-23T23:01:00'),
     
         author: 'чсв печь',
     
@@ -285,18 +285,23 @@ var photoPosts = [
         hashtag:['help', 'ne', 'nada'],
        },
     ];
-
-
-  
-
 class posts{
     constructor(photoPosts){
         this._photoPosts = photoPosts.slice();
     }
-    show(newPost){
+    show(){
+        if(this._photoPosts.length === 0){
+            var lab = document.createElement("h2");
+            var textLab = document.createTextNode("I have nothing to show you ^_^");
+            lab.setAttribute('align', "center");
+            lab.appendChild(textLab);
+            /*const showMoreBttn = document.getElementById('showMore');
+            document.body.insertBefore(lab, showMoreBttn[p]);*/
+        }
         for(let i = 0; i <this._photoPosts.length; i++){
             var postDiv = document.createElement("div");
             postDiv.classList.add("indent");
+            postDiv.id = this._photoPosts[i].id;
             var post = document.createElement("div");
             post.classList.add("post");
             postDiv.appendChild(post);
@@ -325,35 +330,157 @@ class posts{
             figure.appendChild(settingSetting);
             figure.appendChild(settingDelete);
             var p = document.createElement("p");
-            var deskriptoin = document.createTextNode(newPost.descriprion);
+            var deskriptoin = document.createTextNode(this._photoPosts.descriprion);
             p.appendChild(deskriptoin);
             post.appendChild(p);
-            for(let i = 0; i < newPost.hashtag.length; i++){
+            for(let index = 0; index < this._photoPosts[i].hashtag.length; index++){
                 var a = document.createElement("a");
                 a.setAttribute('class', "teg");
-                var teg = document.createTextNode('#' + newPost.hashtag[i] + " ");
+                var teg = document.createTextNode('#' + this._photoPosts[i].hashtag[index] + " ");
                 a.appendChild(teg);
                 post.appendChild(a);
             }
-            document.body.appendChild(postDiv);
+            var photo = document.createElement("img");
+            photo.setAttribute('class', "photo");
+            photo.setAttribute('src', this._photoPosts[i].photoLink);
+            post.appendChild(photo);
+            var hr = document.createElement("hr");
+            post.appendChild(hr);
+            var like = document.createElement("button");
+            var imgLike = document.createElement("img");
+            imgLike.setAttribute('class', "buttonLike");
+            imgLike.setAttribute('src', "likeheartsocialoutline_112532.png")
+            like.appendChild(imgLike);
+            post.appendChild(like);
+            var p = document.createElement("p");
+            p.setAttribute('class', "like" );
+            var t = document.createTextNode(this._photoPosts[i].likes.length);
+            p.appendChild(t);
+            post.appendChild(p);
+            const showMoreBttn = document.getElementById('showMore');
+            document.body.insertBefore(postDiv, showMoreBttn);
         }
     }
+    filter(filterConfig){
+        var arr = new Array();
+        let index = 0;
+              if(filterConfig!=null){
+              for(let i = 0;i <this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].author == filterConfig.author){
+                          arr[index]=this._photoPosts[i];
+                                ++index;
+                    }
+                          for(let k = 0; k < this._photoPosts[i].hashtag.length; k++){
+                          if(this._photoPosts[i].hashtag[k] === filterConfig.hashtag){
+                                arr[index]=this._photoPosts[i];
+                                ++index;
+                          }
+                    }
+                    if(this._photoPosts[i].createdAt === filterConfig.createdAt){
+                          arr[index]=this._photoPosts[i];
+                          ++index;
+                    }
+              } 
+              return arr;
+            }
+            else{
+                  return this._photoPosts;
+            }
+           
+    }
+      getPage (skip, top, filterConfig){
+          let returnArray = new Array();
+          var arr = new Array();
+          arr = this.filter(filterConfig);
+          if(top+skip > arr.length){
+                top = arr.length;
+          }
+          for(let l = skip; l < top; ++l){
+                returnArray[l] = arr[l];
+          }
+         returnArray.sort(comparePost);
+          return returnArray;
+    }
+        getPhotoPost(id) {
+              for(let i = 0;i < this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].id === id){
+                          return this._photoPosts[i];
+                    }
+              }
+              return null;
+        }
+        validatePhotoPost(post){
+              if(post.id === null){
+                    return false;
+              }
+              if(post.descriprion === null){
+                    return false;
+              }
+              if(post.author === null){
+                    return false;
+              }
+              if(post.photoLink === null){
+                    return false;
+              }
+              if(post.createdAt === null){
+                    return false;
+              }
+              return true;
+        }
+        addPhotoPost(photoPost){
+              if(this.validatePhotoPost(photoPost)){
+                    this._photoPosts.push(photoPost);
+              }
+        }
+        removePhotoPost(id){
+              for(let i = 0;i < this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].id === id){
+                          this._photoPosts.slice(i, 1);
+                    }
+              }
+        }
+        addAll(photoposts){
+              let returnArr = [];
+              for(let i = 0; i < photoposts.length; ++i){
+                    if(this.validatePhotoPost(photoposts[i])){
+                          this._photoPosts.push(photoposts[i]);
+                    }
+                    else{
+                          returnArray.push(photoposts[i]);
+                    }
+              }
+              return returnArr;
+        }
+        editPhotoPost(id, photoPost){
+              post = this._photoPosts.getPhotoPost(id);
+              if(photoPost.descriprion!=null){
+                    post.descriprion = photoPost.descriprion;
+              }
+              if(photoPost.photoLink != null){
+                    post.photoLink = photoPost.photoLink;
+              }
+              if(photoPost.likes!=null){
+                    post.likes = photoPost.likes;
+              }
+              if(photoPost.hashtag != null){
+                    post.hashtag = photoPost.hashtag;
+              }
+        }
+        hide(){
+              for(let i = 0; i < this._photoPosts.length; i++){
+              document.body.removeChild(document.getElementById(this._photoPosts[i].id));
+              }
+        }
 }
+function comparePost(a, b) {
+    return a.createdAt>b.createdAt ? -1 : a.createdAt<b.createdAt ? 1 : 0;
+  }
+
 window.onload = function() {
     var post = new posts(photoPosts);
-    post.show({
-    
-        id: '1',
-    
-        descriprion: 'first post ',
-    
-        createdAt:  Date.parse('2018-02-23T23:00:00'),
-    
-        author: 'Иванов Иван',
-    
-        photoLink: '41_NQcBBMCI.jpg',
-        likes: ['petrov', 'ivanov'],
-        hashtag:['pain', 'rain', 'again'],
-  
-       });
+    post.show();
+    post.hide();
+    var nas = post.getPage(0,10, {hashtag:'pain'});
+    var post2 = new posts(nas);
+    post2.show();
   }

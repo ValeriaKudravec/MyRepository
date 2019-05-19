@@ -1,0 +1,8 @@
+SELECT *
+FROM photos.user 
+
+NATURAL JOIN photos.photo_post
+
+GROUP BY USER_ID
+
+HAVING COUNT(USER_ID) > 3

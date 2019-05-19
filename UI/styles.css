@@ -89,6 +89,7 @@ li:hover > ul > li {
   border: 1px solid #b38df7;
   width:15%;
   min-width: 200px;
+  position: fixed;
 }
 @media screen and (max-width: 800px)  {
   .filtr{
@@ -254,11 +255,12 @@ width:5%;
 height:4%;
 }
 footer{
-list-style: none;}
+list-style: none;
+margin-top
+}
 p.items{
 padding:0% 5%;
 float:left;
-position:relative;
 }
 @media screen and (max-width: 800px)  {
   button{
@@ -282,4 +284,5 @@ inputLabel{
 img.buttonLike{
   width:70%;
   height:70%;
+  ;
 }

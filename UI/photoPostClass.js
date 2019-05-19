@@ -7,7 +7,7 @@ var photoPosts = [
     
         descriprion: 'Первый пост',
     
-        createdAt: new  Date('2018-02-23T23:00:00'),
+        createdAt:  new Date('2018-02-23T23:00:00'),
     
         author: 'Иванов Иван',
     
@@ -22,7 +22,7 @@ var photoPosts = [
     
         descriprion: 'Второй пост',
     
-        createdAt:   new  Date('2018-01-23T23:01:00'),
+        createdAt:  new Date('2018-01-23T23:01:00'),
     
         author: 'Петров Иван',
     
@@ -37,7 +37,7 @@ var photoPosts = [
     
         descriprion: 'Третий пост',
     
-        createdAt:   new  Date('2017-02-23T23:05:00'),
+        createdAt: new Date('2017-02-23T23:05:00'),
     
         author: 'Петров петр',
     
@@ -51,7 +51,7 @@ var photoPosts = [
     
         descriprion: 'Четвертый пост',
     
-        createdAt:   new  Date('2018-03-08T23:01:00'),
+        createdAt: new Date('2018-03-08T23:01:00'),
     
         author: 'User4',
     
@@ -65,7 +65,7 @@ var photoPosts = [
     
         descriprion: 'Пятый пост',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'пользователь',
     
@@ -80,7 +80,7 @@ var photoPosts = [
     
         descriprion: 'Шестой пост',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'Огайчик Екатерина',
     
@@ -94,13 +94,13 @@ var photoPosts = [
     
         descriprion: 'seven пост',
     
-        createdAt:   new  Date('2018-02-01T23:01:00'),
+        createdAt: new Date('2018-02-01T23:01:00'),
     
         author: 'Блогер',
     
         photoLink: 'https://avatars.mds.yandex.net/get-pdb/25978/c677b333-0293-4299-96bc-39df0e535ca2/orig',
         likes: ['petrov', 'ivanov', 'сидоров', 'Огайчик Екатерина', 'пользователь', 'User4', 'User3'],
-        hashtag:['seven'],
+        hashtag:['seven', 'two'],
        },
        {
     
@@ -108,7 +108,7 @@ var photoPosts = [
     
         descriprion: '8 пост',
     
-        createdAt:   new  Date('2018-04-23T23:01:00'),
+        createdAt: new Date('2018-04-23T23:01:00'),
     
         author: 'Иванов Петр',
     
@@ -122,7 +122,7 @@ var photoPosts = [
     
         descriprion: 'Девятый пост',
     
-        createdAt:   new  Date('2018-03-23T23:01:00'),
+        createdAt: new Date('2018-03-23T23:01:00'),
     
         author: 'калека',
     
@@ -136,7 +136,7 @@ var photoPosts = [
     
         descriprion: 'Десятый пост',
     
-        createdAt:   new  Date('2018-02-02T23:01:00'),
+        createdAt: new Date('2018-02-02T23:01:00'),
     
         author: 'Чувак чувачок',
     
@@ -150,7 +150,7 @@ var photoPosts = [
     
         descriprion: 'Одинадцатый пост',
     
-        createdAt:  new Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'тюльпан',
     
@@ -164,7 +164,7 @@ var photoPosts = [
     
         descriprion: 'двенадцатый пост',
     
-        createdAt:  new  Date('2018-02-23T23:01:00'),
+        createdAt:  new Date('2018-02-23T23:01:00'),
     
         author: 'чсв печь',
     
@@ -178,7 +178,7 @@ var photoPosts = [
     
         descriprion: 'Тринадцатый пост',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'уууууужин',
     
@@ -192,7 +192,7 @@ var photoPosts = [
     
         descriprion: 'Четырнадцатый пост',
     
-        createdAt:  new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'юджин',
     
@@ -206,7 +206,7 @@ var photoPosts = [
     
         descriprion: 'евгений мележ',
     
-        createdAt:   new  Date('2018-02-03T23:01:00'),
+        createdAt: new Date('2018-02-03T23:01:00'),
     
         author: 'мележ',
     
@@ -220,7 +220,7 @@ var photoPosts = [
     
         descriprion: '16-ый пост',
     
-        createdAt:  new  Date('2018-02-23T23:01:00'),
+        createdAt: new  Date('2018-02-23T23:01:00'),
     
         author: 'снеговик',
     
@@ -234,7 +234,7 @@ var photoPosts = [
     
         descriprion: 'рюмка водки',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'Петрова Ивана',
     
@@ -248,7 +248,7 @@ var photoPosts = [
     
         descriprion: 'красотуля',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'Ивангей',
     
@@ -262,7 +262,7 @@ var photoPosts = [
     
         descriprion: 'дивчина',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt:  new Date('2018-02-23T23:01:00'),
     
         author: 'Алесенька Котик',
     
@@ -276,7 +276,7 @@ var photoPosts = [
     
         descriprion: 'памагити',
     
-        createdAt:   new  Date('2018-02-23T23:01:00'),
+        createdAt: new Date('2018-02-23T23:01:00'),
     
         author: 'можно ненада',
     
@@ -285,133 +285,202 @@ var photoPosts = [
         hashtag:['help', 'ne', 'nada'],
        },
     ];
-
-function comparePost(a, b) {
-      return a.createdAt>b.createdAt ? -1 : a.createdAt<b.createdAt ? 1 : 0;
-    }
-class PostCollection{
+class posts{
     constructor(photoPosts){
         this._photoPosts = photoPosts.slice();
     }
-      filter(filterConfig){
-      var arr = new Array();
-      let index = 0;
-            if(filterConfig!=null){
-            for(let i = 0;i <this._photoPosts.length; ++i){
-                  if(this._photoPosts[i].author == filterConfig.author){
-                        arr[index]=this._photoPosts[i];
-                              ++index;
-                  }
-                        for(let k = 0; k < this._photoPosts[i].hashtag.length; k++){
-                        if(this._photoPosts[i].hashtag[k] === filterConfig.hashtag){
-                              arr[index]=this._photoPosts[i];
-                              ++index;
-                        }
-                  }
-                  if(this._photoPosts[i].createdAt === filterConfig.createdAt){
-                        arr[index]=this._photoPosts[i];
-                        ++index;
-                  }
-            } 
-            return arr;
-          }
-          else{
-                return this._photoPosts;
-          }
-         
-  }
-    getPage (skip, top, filterConfig){
-        let returnArray = new Array();
+    show(){
+        if(this._photoPosts.length === 0){
+            var lab = document.createElement("h2");
+            var textLab = document.createTextNode("I have nothing to show you ^_^");
+            lab.setAttribute('align', "center");
+            lab.appendChild(textLab);
+            /*const showMoreBttn = document.getElementById('showMore');
+            document.body.insertBefore(lab, showMoreBttn[p]);*/
+        }
+        for(let i = 0; i <this._photoPosts.length; i++){
+            var postDiv = document.createElement("div");
+            postDiv.classList.add("indent");
+            postDiv.id = this._photoPosts[i].id;
+            var post = document.createElement("div");
+            post.classList.add("post");
+            postDiv.appendChild(post);
+            var figure = document.createElement("figure");
+            post.appendChild(figure);
+            var k1 = document.createElement("k");
+            var k2 = document.createElement("k");
+            figure.appendChild(k1);
+            figure.appendChild(k2);
+            k1.classList.add("name");
+            var font = document.createElement("font"); 
+            var name = document.createTextNode(this._photoPosts[i].author);
+            k2.classList.add("date");
+            k2.appendChild(font);
+            var date = document.createTextNode((this._photoPosts[i].createdAt).getDate() +"." + 
+            ((this._photoPosts[i].createdAt).getMonth()+1) +"." + (this._photoPosts[i].createdAt).getFullYear() );
+            font.setAttribute('size', -2);
+            font.appendChild(date);
+            k1.appendChild(name);
+            var settingSetting =  document.createElement("img"); 
+            settingSetting.classList.add("setting");
+            settingSetting.setAttribute('src', "setting.png");
+            var settingDelete =  document.createElement("img"); 
+            settingDelete.classList.add("setting");
+            settingDelete.setAttribute('src', "deleteIcon.png");
+            figure.appendChild(settingSetting);
+            figure.appendChild(settingDelete);
+            var p = document.createElement("p");
+            var deskriptoin = document.createTextNode(this._photoPosts.descriprion);
+            p.appendChild(deskriptoin);
+            post.appendChild(p);
+            for(let index = 0; index < this._photoPosts[i].hashtag.length; index++){
+                var a = document.createElement("a");
+                a.setAttribute('class', "teg");
+                var teg = document.createTextNode('#' + this._photoPosts[i].hashtag[index] + " ");
+                a.appendChild(teg);
+                post.appendChild(a);
+            }
+            var photo = document.createElement("img");
+            photo.setAttribute('class', "photo");
+            photo.setAttribute('src', this._photoPosts[i].photoLink);
+            post.appendChild(photo);
+            var hr = document.createElement("hr");
+            post.appendChild(hr);
+            var like = document.createElement("button");
+            var imgLike = document.createElement("img");
+            imgLike.setAttribute('class', "buttonLike");
+            imgLike.setAttribute('src', "likeheartsocialoutline_112532.png")
+            like.appendChild(imgLike);
+            post.appendChild(like);
+            var p = document.createElement("p");
+            p.setAttribute('class', "like" );
+            var t = document.createTextNode(this._photoPosts[i].likes.length);
+            p.appendChild(t);
+            post.appendChild(p);
+            const showMoreBttn = document.getElementById('showMore');
+            document.body.insertBefore(postDiv, showMoreBttn);
+        }
+    }
+    filter(filterConfig){
         var arr = new Array();
-        arr = this.filter(filterConfig);
-        if(top+skip > arr.length){
-              top = arr.length;
+        let index = 0;
+              if(filterConfig!=null){
+              for(let i = 0;i <this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].author == filterConfig.author){
+                          arr[index]=this._photoPosts[i];
+                                ++index;
+                    }
+                          for(let k = 0; k < this._photoPosts[i].hashtag.length; k++){
+                          if(this._photoPosts[i].hashtag[k] === filterConfig.hashtag){
+                                arr[index]=this._photoPosts[i];
+                                ++index;
+                          }
+                    }
+                    if(this._photoPosts[i].createdAt === filterConfig.createdAt){
+                          arr[index]=this._photoPosts[i];
+                          ++index;
+                    }
+              } 
+              return arr;
+            }
+            else{
+                  return this._photoPosts;
+            }
+           
+    }
+      getPage (skip, top, filterConfig){
+          let returnArray = new Array();
+          var arr = new Array();
+          arr = this.filter(filterConfig);
+          if(top+skip > arr.length){
+                top = arr.length;
+          }
+          for(let l = skip; l < top; ++l){
+                returnArray[l] = arr[l];
+          }
+         returnArray.sort(comparePost);
+          return returnArray;
+    }
+        getPhotoPost(id) {
+              for(let i = 0;i < this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].id === id){
+                          return this._photoPosts[i];
+                    }
+              }
+              return null;
         }
-        for(let l = skip; l < top; ++l){
-              returnArray[l] = arr[l];
+        validatePhotoPost(post){
+              if(post.id === null){
+                    return false;
+              }
+              if(post.descriprion === null){
+                    return false;
+              }
+              if(post.author === null){
+                    return false;
+              }
+              if(post.photoLink === null){
+                    return false;
+              }
+              if(post.createdAt === null){
+                    return false;
+              }
+              return true;
         }
-       returnArray.sort(comparePost);
-        return returnArray;
-  }
-      getPhotoPost(id) {
-            for(let i = 0;i < this._photoPosts.length; ++i){
-                  if(this._photoPosts[i].id === id){
-                        return this._photoPosts[i];
-                  }
-            }
-            return null;
-      }
-      validatePhotoPost(post){
-            if(post.id === null){
-                  return false;
-            }
-            if(post.descriprion === null){
-                  return false;
-            }
-            if(post.author === null){
-                  return false;
-            }
-            if(post.photoLink === null){
-                  return false;
-            }
-            if(post.createdAt === null){
-                  return false;
-            }
-            return true;
-      }
-      addPhotoPost(photoPost){
-            if(this.validatePhotoPost(photoPost)){
-                  this._photoPosts.push(photoPost);
-            }
-      }
-      removePhotoPost(id){
-            for(let i = 0;i < this._photoPosts.length; ++i){
-                  if(this._photoPosts[i].id === id){
-                        this._photoPosts.slice(i, 1);
-                  }
-            }
-      }
-      addAll(photoposts){
-            let returnArr = [];
-            for(let i = 0; i < photoposts.length; ++i){
-                  if(this.validatePhotoPost(photoposts[i])){
-                        this._photoPosts.push(photoposts[i]);
-                  }
-                  else{
-                        returnArray.push(photoposts[i]);
-                  }
-            }
-            return returnArr;
-      }
-      editPhotoPost(id, photoPost){
-            post = this._photoPosts.getPhotoPost(id);
-            if(photoPost.descriprion!=null){
-                  post.descriprion = photoPost.descriprion;
-            }
-            if(photoPost.photoLink != null){
-                  post.photoLink = photoPost.photoLink;
-            }
-            if(photoPost.likes!=null){
-                  post.likes = photoPost.likes;
-            }
-            if(photoPost.hashtag != null){
-                  post.hashtag = photoPost.hashtag;
-            }
-      }
+        addPhotoPost(photoPost){
+              if(this.validatePhotoPost(photoPost)){
+                    this._photoPosts.push(photoPost);
+              }
+        }
+        removePhotoPost(id){
+              for(let i = 0;i < this._photoPosts.length; ++i){
+                    if(this._photoPosts[i].id === id){
+                          this._photoPosts.slice(i, 1);
+                    }
+              }
+        }
+        addAll(photoposts){
+              let returnArr = [];
+              for(let i = 0; i < photoposts.length; ++i){
+                    if(this.validatePhotoPost(photoposts[i])){
+                          this._photoPosts.push(photoposts[i]);
+                    }
+                    else{
+                          returnArray.push(photoposts[i]);
+                    }
+              }
+              return returnArr;
+        }
+        editPhotoPost(id, photoPost){
+              post = this._photoPosts.getPhotoPost(id);
+              if(photoPost.descriprion!=null){
+                    post.descriprion = photoPost.descriprion;
+              }
+              if(photoPost.photoLink != null){
+                    post.photoLink = photoPost.photoLink;
+              }
+              if(photoPost.likes!=null){
+                    post.likes = photoPost.likes;
+              }
+              if(photoPost.hashtag != null){
+                    post.hashtag = photoPost.hashtag;
+              }
+        }
+        hide(){
+              for(let i = 0; i < this._photoPosts.length; i++){
+              document.body.removeChild(document.getElementById(this._photoPosts[i].id));
+              }
+        }
 }
-var post = new PostCollection(photoPosts);
-post.getPage(0,10, {hashtag:'post'});
-post.removePhotoPost('1');
-post.getPage(0,10);
-post.validatePhotoPost({author:'hi', descriprion:'hello'});
-post.addPhotoPost({
-      id: '21',
-      descriprion: 'новый пост',
-      createdAt:  Date.parse('2018-02-23T23:00:00'),
-      author: 'новопостер',
-      photoLink: '41_NQcBBMCI.jpg',
-      likes: ['petrov', 'ivanov'],
-      hashtag:['new', 'rain', 'again'],
+function comparePost(a, b) {
+    return a.createdAt>b.createdAt ? -1 : a.createdAt<b.createdAt ? 1 : 0;
+  }
 
-     });
- post.getPage(0,10, {hashtag:'new'});
+window.onload = function() {
+    var post = new posts(photoPosts);
+    post.show();
+    post.hide();
+    var nas = post.getPage(0,10, {hashtag:'pain'});
+    var post2 = new posts(nas);
+    post2.show();
+  }
