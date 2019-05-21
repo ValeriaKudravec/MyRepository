@@ -1,3 +1,3 @@
 SELECT * 
-FROM photos.photo_post; 
-ORDER BY CREATION_DATE;
+FROM photos.photo_post
+ORDER BY CREATION_DATE

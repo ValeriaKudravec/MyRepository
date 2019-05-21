@@ -4,6 +4,6 @@ FROM photos.user
 
 NATURAL JOIN photos.photo_post
 
-WHERE CREATION_DATE LIKE '____-05-09 __:__:__'
+WHERE CREATION_DATE LIKE '____-05-09T__:__:__'
 
 GROUP BY USER_ID

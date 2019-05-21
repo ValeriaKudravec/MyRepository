@@ -4,7 +4,7 @@ FROM photos.user
 
 NATURAL JOIN photos.photo_post
 
-WHERE DATEDIFF(CURTIME(), str_to_date(CREATION_TIME, '%Y-%m-%d %T')) = 0
+WHERE DATEDIFF(dd, CURTIME(), str_to_date(CREATION_DATE, '%Y-%m-%d %T')) = 0
 
 GROUP BY USER_ID
 
